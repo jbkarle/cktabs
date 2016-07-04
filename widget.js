@@ -344,7 +344,22 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
                     pubsubviewer.attachTo($(topCssSelector + ' .panel-heading .dropdown-menu'), that);
                 });
             });
-
+            chilipeppr.load(
+              "#com-chilipeppr-widget-serialport-instance",
+              "http://raw.githubusercontent.com/chilipeppr/widget-spjs/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetSerialport
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-serialport"], // the id you gave your widget
+                  function(myObjWidgetSerialport) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Serial Port JSON Server just got loaded.", myObjWidgetSerialport);
+                    myObjWidgetSerialport.init();
+                  }
+                );
+              }
+            );
         },
 
     }
