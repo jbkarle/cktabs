@@ -360,7 +360,71 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
                 );
               }
             );
+            chilipeppr.load(
+              "#com-chilipeppr-widget-spconsole-instance",
+              "http://raw.githubusercontent.com/chilipeppr/widget-console/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetSpconsole
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-spconsole"], // the id you gave your widget
+                  function(myObjWidgetSpconsole) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Serial Port Console v1.7 just got loaded.", myObjWidgetSpconsole);
+                    myObjWidgetSpconsole.init();
+                  }
+                );
+              }
+            );
+            chilipeppr.load(
+              "#com-chilipeppr-widget-gcode-instance",
+              "http://raw.githubusercontent.com/chilipeppr/widget-gcodelist/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetGcode
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-gcode"], // the id you gave your widget
+                  function(myObjWidgetGcode) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Gcode v3 just got loaded.", myObjWidgetGcode);
+                    myObjWidgetGcode.init();
+                  }
+                );
+              }
+            );
+            chilipeppr.load(
+              "#com-chilipeppr-widget-macro-instance",
+              "http://raw.githubusercontent.com/chilipeppr/widget-macro/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetMacro
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-macro"], // the id you gave your widget
+                  function(myObjWidgetMacro) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Macro just got loaded.", myObjWidgetMacro);
+                    myObjWidgetMacro.init();
+                  }
+                );
+              }
+            );
+            chilipeppr.load(
+              "#com-chilipeppr-widget-tinyg-instance",
+              "http://raw.githubusercontent.com/chilipeppr/widget-tinyg/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetTinyg
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-tinyg"], // the id you gave your widget
+                  function(myObjWidgetTinyg) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Tinyg v2.0 just got loaded.", myObjWidgetTinyg);
+                    myObjWidgetTinyg.init();
+                  }
+                );
+              }
+            );
         },
-
+        
     }
 });
