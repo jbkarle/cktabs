@@ -138,6 +138,7 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
             this.forkSetup();
 
             console.log("I am done being initted.");
+            this.load
         },
         /**
          * Call this method from init to setup all the buttons when this widget
@@ -176,6 +177,7 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
             // as opposed to a full callback method in the Hello Word 2
             // example further below. Notice we have to use "that" so 
             // that the this is set correctly inside the anonymous method
+            /*
             $('#' + this.id + ' .btn-sayhello').click(function() {
                 console.log("saying hello");
                 // Make sure popover is immediately hidden
@@ -193,11 +195,12 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
             // of the slick .bind(this) technique to correctly set "this"
             // when the callback is called
             $('#' + this.id + ' .btn-helloworld2').click(this.onHelloBtnClick.bind(this));
-
+            */
         },
         /**
          * onHelloBtnClick is an example of a button click event callback
          */
+/*
         onHelloBtnClick: function(evt) {
             console.log("saying hello 2 from btn in tab 1");
             chilipeppr.publish(
@@ -205,8 +208,8 @@ cpdefine("inline:net-fka-ck-tabs", ["chilipeppr_ready", /* other dependencies he
                 "Hello 2 Title",
                 "Hello World 2 from Tab 1 from widget " + this.id,
                 2000 /* show for 2 second */
-            );
-        },
+//            );
+//        },
         /**
          * User options are available in this property for reference by your
          * methods. If any change is made on these options, please call
